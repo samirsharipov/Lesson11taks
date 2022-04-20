@@ -1,0 +1,8 @@
+package uz.pdp.lesson11taks.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import uz.pdp.lesson11taks.entity.User;
+
+public interface UserRepo extends JpaRepository<User,Integer> {
+    boolean existsByPhoneNumber(String phoneNumber);
+}
